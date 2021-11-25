@@ -10,7 +10,7 @@ class CarRateSerializer(serializers.ModelSerializer):
 
 
 class CarSerializer(serializers.ModelSerializer):
-    rates = CarRateSerializer(many=True, read_only=True)
+    rates = CarRateSerializer(many=True, read_only=True)    #to hide rates when GET method, type "write_only=True"
 
     ''' -----> get all rates of given object and calculate average rate
                 can't figure how to extract rating value...
